@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Apriori Result</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Apriori Results</h2>
+
+    <div class="stats">
+      <p><b>Min Support:</b> {{min_support}}</p>
+      <p><b>Min Confidence:</b> {{min_confidence}}</p>
+      <p><b>Total Transactions:</b> {{total_transactions}}</p>
+      <p><b>Total Unique Items:</b> {{total_items}}</p>
+    </div>
+
+    <h3>Generated Association Rules</h3>
+    <div class="table-wrap">
+      {{ table_html | safe }}
+    </div>
+
+    <a class="back" href="/apriori">← Try Another File</a>
+    <a class="back" href="/">← Home</a>
+  </div>
+</body>
+</html>

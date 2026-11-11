@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DBSCAN Result</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>DBSCAN Results</h2>
+
+    <div class="stats">
+      <p><b>eps:</b> {{eps}}</p>
+      <p><b>min_samples:</b> {{min_samples}}</p>
+      <p><b>Numeric Columns Used:</b> {{used_numeric_columns}}</p>
+      <p><b>Total Clusters (excluding noise):</b> {{cluster_count}}</p>
+      <p><b>Noise Points (-1):</b> {{noise_count}}</p>
+    </div>
+
+    <h3>Clustered Dataset</h3>
+    <div class="table-wrap">
+      {{ table_html | safe }}
+    </div>
+
+    <a class="back" href="/dbscan">← Try Another File</a>
+    <a class="back" href="/">← Home</a>
+  </div>
+</body>
+</html>

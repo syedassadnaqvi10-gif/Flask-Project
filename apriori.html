@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Apriori</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Apriori - Association Rule Mining</h2>
+
+    <div class="note">
+      <b>CSV Format:</b> Each row is a transaction. Items should be in separate columns.<br>
+      Example row: Milk, Bread, Butter
+    </div>
+
+    <form action="/apriori/result" method="post" enctype="multipart/form-data" class="form">
+      <label>Upload Transactions CSV:</label>
+      <input type="file" name="dataset" required>
+
+      <label>Min Support (e.g. 0.3):</label>
+      <input type="number" step="0.01" name="min_support" value="0.30" required>
+
+      <label>Min Confidence (e.g. 0.6):</label>
+      <input type="number" step="0.01" name="min_confidence" value="0.60" required>
+
+      <button type="submit">Generate Rules</button>
+    </form>
+
+    <a class="back" href="/">← Back to Home</a>
+  </div>
+</body>
+</html>
